@@ -703,6 +703,7 @@ var FullCalendar = (function (exports) {
             milliseconds: (m1.valueOf() - m1day.valueOf()) - (m0.valueOf() - m0day.valueOf()),
         };
     }
+   
     // Diffing Whole Units
     function diffWholeWeeks(m0, m1) {
         let d = diffWholeDays(m0, m1);
@@ -11649,6 +11650,7 @@ var FullCalendar = (function (exports) {
                     this.droppableEvent = droppableEvent;
                 }
             };
+            console.log(m0day)
             this.handleDragEnd = (pev) => {
                 let { receivingContext, droppableEvent } = this;
                 this.clearDrag();
@@ -11728,6 +11730,7 @@ var FullCalendar = (function (exports) {
             return true;
         }
     }
+    //under 19
     // Utils for computing event store from the DragMeta
     // ----------------------------------------------------------------------------------------------------
     function computeEventForDateSpan(dateSpan, dragMeta, context) {
@@ -11785,6 +11788,7 @@ var FullCalendar = (function (exports) {
                         (longPressDelay != null ? longPressDelay : BASE_OPTION_DEFAULTS.longPressDelay) :
                         0;
             };
+            console.log(m0day)
             this.handleDragStart = (ev) => {
                 if (ev.isTouch &&
                     this.dragging.delay &&
@@ -14303,6 +14307,7 @@ var FullCalendar = (function (exports) {
                     segs.push(seg);
                     // detect when range won't go fully into the next day,
                     // and mutate the latest seg to the be the end.
+
                     if (!seg.isEnd && !allDay &&
                         dayIndex + 1 < dayRanges.length &&
                         range.end <
