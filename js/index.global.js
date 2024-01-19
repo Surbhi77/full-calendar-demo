@@ -82,6 +82,7 @@ var FullCalendar = (function (exports) {
         if (elWithNonce) {
             return elWithNonce.nonce || '';
         }
+
         return '';
     }
     // main
@@ -108,6 +109,7 @@ var FullCalendar = (function (exports) {
                 if (delay == null) {
                     this.tryDrain();
                 }
+                
                 else {
                     this.timeoutId = setTimeout(// NOT OPTIMAL! TODO: look at debounce
                     this.tryDrain.bind(this), delay);
