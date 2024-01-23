@@ -21,7 +21,6 @@ body {
 }
 
 /* side nav */
-
 .calendar-sidenav {
     width: 350px;
     min-width: 350px;
@@ -38,7 +37,6 @@ body {
     padding: 25px;
     
 }
-
 .sidenav-list .accordion-item {
     border: 0;
 }
